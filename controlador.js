@@ -27,16 +27,17 @@ const cargarTabla = async() => {
     //console.log(datos);
     for(item of datos) {
         // Destructuracion
-        const {id,name,email} = item;
+        const {id,name,username,email} = item;
         cadena += `
             <tr>
                 <td>${id}</td>
                 <td>${name}</td>
+                <td>${username}</td>
                 <td>${email}</td>
             </tr>    
         `;
         
-        console.log(`El usuario es ${name}, su email es ${email}`);
+        console.log(`El usuario es ${name}, su Nick es ${username}, su email es ${email}`);
     }
     tbody.innerHTML = cadena;
     
